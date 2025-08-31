@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Muleke das Promos — As Melhores Promoções de 2025</title>
+  <meta name="description" content="Rastreamento de ofertas 100% gratuito. Produtos pela metade do preço. Entre no grupo do Telegram ou WhatsApp e receba as melhores promoções do dia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0f; /* fundo escuro */
+      --card:#12131a;
+      --text:#f5f7fb;
+      --muted:#c2c6d0;
+      --brand:#0ea5e9; /* azul Telegram */
+      --brand-2:#0284c7; /* azul hover */
+      --accent:#ef4444; /* vermelho barra */
+      --glow:#0ea5e955;
+      --whatsapp:#22c55e; /* verde WhatsApp */
+      --whatsapp-hover:#16a34a;
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.5;
+    }
+    .announcement{
+      position:sticky;top:0;z-index:50;
+      background:var(--accent);color:#fff;text-align:center;padding:14px 10px;font-weight:800;letter-spacing:.5px;
+      text-transform:uppercase;font-size:.95rem;box-shadow:0 2px 12px #00000040
+    }
+    .hero{
+      min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;
+      padding-bottom:env(safe-area-inset-bottom);
+    }
+    /* background decor */
+    .hero::before{
+      content:"";position:absolute;inset:-20%;
+      background:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+      filter:blur(6px) brightness(.45);
+      transform:scale(1.1);
+    }
+    .hero::after{ /* gradient vignette */
+      content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 40%, #00000000 0%, #000000aa 80%);
+    }
+    .container{width:min(1100px,92%);margin-inline:auto;position:relative;z-index:1}
+    .stack{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+    .badge{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:#ffffff10;
+      border:1px solid #ffffff1a;font-weight:700;backdrop-filter:blur(6px);}    
+    .badge .spark{filter:drop-shadow(0 0 6px #fff)}
+    h1{margin:6px 0 0;font-size:clamp(22px, 3.2vw + .8rem, 40px);font-weight:900;letter-spacing:.3px}
+    .sub{color:var(--muted);font-weight:600;opacity:.95}
+    .card{
+      margin-top:10px;background:linear-gradient(180deg, #141726, #0f111a);
+      border:1px solid #ffffff12;border-radius:var(--radius);box-shadow:0 10px 40px #0006, inset 0 0 0 1px #ffffff08;
+      padding:26px;display:grid;grid-template-columns:1fr;gap:26px;place-items:center
+    }
+    @media (min-width:880px){
+      .card{grid-template-columns:420px 1fr;gap:36px;padding:36px}
+    }
+    .pfp{width:min(380px,86vw);max-width:420px;aspect-ratio:1/1;border-radius:18px;overflow:hidden;border:2px solid #ffffff18;box-shadow:0 10px 30px #0008}
+    .pfp img{width:100%;height:100%;object-fit:cover}
+
+    /* CTAs responsivos */
+    .ctas{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 22px;border-radius:999px;font-weight:800;font-size:1.05rem;
+      color:#061105;border:none;cursor:pointer;text-decoration:none;transition:transform .06s ease, box-shadow .2s ease, background .2s ease, filter .2s ease;min-height:56px}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .btn:active{transform:translateY(0)}
+    .btn.telegram{background:var(--brand);color:#03131f;box-shadow:0 8px 28px var(--glow)}
+    .btn.whatsapp{background:var(--whatsapp);color:#031f09;box-shadow:0 8px 28px #23d97555}
+    .btn .ico{width:22px;height:22px;display:inline-block}
+
+    /* Mobile-first tweaks */
+    @media (max-width:879px){
+      .container{width:min(100%,94%)}
+      .card{padding:20px;border-radius:18px}
+      .sub{font-size:0.98rem}
+      .ctas{gap:18px}
+      .btn{width:100%;font-size:1rem;padding:16px 18px} /* botões full-width com ótima área de toque */
+      .announcement{font-size:.9rem;padding:12px 8px}
+    }
+
+    /* Tablets médios */
+    @media (min-width:600px) and (max-width:879px){
+      .btn{width:auto;min-width:260px}
+      .ctas{justify-content:flex-start}
+    }
+
+    .trust{margin-top:14px;color:#e5e7eb;opacity:.9;font-weight:700;letter-spacing:.3px}
+    .footer{padding:30px 0 50px;text-align:center;color:#9aa3b2}
+    .footer a{color:#9aa3b2}
+      .content{align-items:flex-start;text-align:left;width:100%}
+    @media (max-width:879px){
+      .content{align-items:center;text-align:center}
+    }
+    
+    /* Centralização e respiro adicional em mobile */
+    @media (max-width:600px){
+      .stack{gap:16px}
+      .badge{font-size:.95rem;padding:8px 14px}
+      .card{gap:18px}
+      .pfp{margin-inline:auto}
+      .ctas{justify-content:center}
+      .btn{width:100%;max-width:520px;margin-inline:auto}
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="announcement">⚡️ Aproveite agora as melhores promoções de 2025</div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="stack">
+        <span class="badge" aria-label="Rastreamento gratuito">
+          <span class="spark">✴️</span>
+          <span>RASTREAMENTO DE OFERTAS <strong>100% GRATUITO</strong></span>
+          <span class="spark">✴️</span>
+        </span>
+        <h1>Produtos pela <strong>METADE DO PREÇO</strong> ⚡</h1>
+      </div>
+
+      <div class="card" role="region" aria-label="Call to action">
+        <figure class="pfp" aria-label="Imagem do criador">
+          <!-- Troque a imagem abaixo pela sua. Pode ser PNG/JPG local ou um link -->
+          <img src="https://i.imgur.com/0mV0m1b.jpg" alt="Foto em capa amarela com óculos pixel" />
+        </figure>
+
+        <div class="stack content">
+          <p class="sub">Entre e receba as melhores promoções do dia em tempo real. É simples: clique e participe do canal que preferir.</p>
+
+          <div class="ctas">
+            <!-- TELEGRAM -->
+            <a class="btn telegram" href="https://t.me/SEU_CANAL" target="_blank" rel="noopener" aria-label="Entrar no canal do Telegram">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 3.5 2.9 10.6c-1 .4-1 1.9.1 2.2l4.6 1.3 1.9 5.9c.3 1 .6 1.2 1.5.7l2.7-2 4.6 3.4c.8.5 1.8.1 2.1-.8L23 4.7c.3-1-.4-1.7-1.5-1.2zM8.6 14.7l9.9-6.2c.5-.3 1 .3.6.7l-8.2 7.6c-.4.4-1.2.3-1.4-.3l-.9-2.5z" fill="#05270f"/></svg>
+              Entrar no Telegram
+            </a>
+
+            <!-- WHATSAPP -->
+            <a class="btn whatsapp" href="https://wa.me/SEU_NUMERO_OU_LINK_DE_CONVITE" target="_blank" rel="noopener" aria-label="Entrar no grupo do WhatsApp">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 3.8A10 10 0 0 0 3.7 20L3 22.8 6 22A10 10 0 1 0 20 3.8Zm-8 16a8 8 0 0 1-4-1l-.3-.2-2.4.6.7-2.3-.2-.3A8 8 0 1 1 12 19.8Zm4.5-5.6c-.3-.2-1.7-.8-2-.9-.3-.1-.4-.1-.6.2-.2.3-.8.9-1 .9-.1 0-.3 0-.5-.3-.3-.2-1-1-1.2-1.4-.2-.3 0-.5.2-.7l.3-.4c.1-.2.1-.3 0-.6 0-.2-.6-1.6-.8-2-.2-.4-.4-.3-.6-.3h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 3 1.2 3.2c.1.2 2.1 3.4 5.1 4.6.7.3 1.2.4 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3 0-.2-.2-.3-.5-.5Z" fill="#00131f"/></svg>
+              Entrar no WhatsApp
+            </a>
+          </div>
+
+          <div class="trust">✴️ Já somos <strong>+5 mil membros</strong> ✴️</div>
+        </div>
+      </div>
+
+      <p class="footer">© <span id="year"></span> Muleke das Promos — Feito com ❤️ para caçadores de ofertas.
+        • <a href="#" onclick="alert('Adicione aqui seu link de política de privacidade.');return false;">Política de Privacidade</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    // Atualiza ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
